@@ -2,7 +2,6 @@ package com.javarush.task.task06.task0622;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 /* 
@@ -16,7 +15,7 @@ public class Solution {
         for (int i = 0; i < nums.length; i++) {
             nums[i] = Integer.parseInt(reader.readLine());
         }
-        Arrays.sort(nums, 0, 4);
+        Arrays.sort(nums);
         for (int i = 0; i < nums.length; i++) {
             System.out.println(nums[i]);
 
