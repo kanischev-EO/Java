@@ -6,20 +6,24 @@ package com.javarush.task.task04.task0416;
 
 import java.io.*;
 import java.util.*;
-import  java.io.BufferedReader;
 
 public class Solution {
     public static void main(String[] args) throws Exception {
         //напишите тут ваш код
-        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        double enter = Double.parseDouble(bf.readLine());
-        double res = enter % 5;
-        if (res >= 0 && res <3)
-            System.out.println("зеленый");
-        else if (res >= 3 && res <4)
-            System.out.println("желтый");
-        else if (res >= 4 && res <5)
-            System.out.println("красный");
-    }
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        double value = Double.parseDouble(bufferedReader.readLine());
+        double t = value % 5;
 
+
+        if (t < 3) {
+            System.out.println("зелёный");
+        }
+
+        if (t >= 3 && t < 4) {
+            System.out.println("жёлтый");
+        }
+        if (t >= 4 && t < 5) {
+            System.out.println("красный");
+        }
     }
+}
