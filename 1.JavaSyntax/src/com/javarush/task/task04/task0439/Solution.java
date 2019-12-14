@@ -6,16 +6,14 @@ package com.javarush.task.task04.task0439;
 
 import java.io.*;
 import java.util.*;
-import java.io.InputStreamReader;
 
 public class Solution {
     public static void main(String[] args) throws Exception {
         //напишите тут ваш код
-        BufferedReader bf= new BufferedReader(new InputStreamReader(System.in));
-        String name= bf.readLine();
-        for (int i = 0; i <10 ; i++) {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        String name = bufferedReader.readLine();
+        for (int i = 0; i < 10 ; i++) {
             System.out.println(name + " любит меня.");
-
         }
 
     }

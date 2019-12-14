@@ -5,48 +5,37 @@ package com.javarush.task.task05.task0510;
 */
 
 public class Cat {
-
-    String name;
-    int age;
-    int weight;
-    String address;
-    String color;
-
-
-    public void initialize(String name) {
+    //напишите тут ваш код
+    String name, address, color;
+    int age, weight;
+     public void initialize(String name){
+         this.name = name;
+         color ="DefoltColor";
+         age = 1;
+         weight = 5;
+     }
+    public void initialize(String name, int weight, int age){
         this.name = name;
-        this.age = 10;
-        this.color = "red";
-        this.weight = 60;
-    }
-
-    public void initialize(String name, int weight, int age) {
-        this.name = name;
+        color ="DefoltColor";
         this.age = age;
         this.weight = weight;
-        this.color = "orange";
     }
-
-
-    public void initialize(String name, int age) {
+    public void initialize(String name, int age){
         this.name = name;
+        color ="DefoltColor";
+        this.age = age;
+        weight = 5;
+    }
+    public void initialize(int weight, String color){
+        this.weight = weight;
+        this.color =color;
         this.age = age;
     }
-
-
-    public void initialize(int weight, String color) {
+    public void initialize(int weight, String color, String address){
         this.weight = weight;
-        this.color = color;
-        this.age = 12;
-
-    }
-
-
-    public void initialize(int weight, String color, String address) {
-        this.weight = weight;
-        this.color = color;
+        this.color =color;
         this.address = address;
-        this.age = 13;
+        age = 1;
     }
 
     public static void main(String[] args) {

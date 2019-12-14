@@ -7,20 +7,19 @@ package com.javarush.task.task05.task0505;
 public class Solution {
     public static void main(String[] args) {
         //напишите тут ваш код
-        Cat cat1 = new Cat("Vasha", 12, 30, 30);
-        Cat cat2 = new Cat("Glasha", 13, 34, 34);
-        Cat cat3 = new Cat("Vasha", 14, 37, 38);
+        Cat cat = new Cat("Мурка", 12, 46, 32);
+        Cat cat1 = new Cat("Урка", 8, 20, 18);
+        Cat cat2 = new Cat("Мурзик", 20, 70,70);
+        System.out.println(cat.fight(cat1));
         System.out.println(cat1.fight(cat2));
-        System.out.println(cat2.fight(cat3));
-        System.out.println(cat3.fight(cat1));
-
+        System.out.println(cat2.fight(cat));
     }
 
     public static class Cat {
-        private String name;
-        private int age;
-        private int weight;
-        private int strength;
+        protected String name;
+        protected int age;
+        protected int weight;
+        protected int strength;
 
         public Cat(String name, int age, int weight, int strength) {
             this.name = name;

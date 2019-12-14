@@ -5,14 +5,14 @@ package com.javarush.task.task05.task0511;
 */
 
 public class Dog {
-    String name, color;
+    //напишите тут ваш код
+    String name;
     int height;
-
-    public void initialize(String name) {
+    String color;
+    public void initialize(String name){
         this.name = name;
     }
-
-    public void initialize(String name, int height) {
+    public void initialize(String name, int height){
         this.name = name;
         this.height = height;
     }
@@ -22,9 +22,7 @@ public class Dog {
         this.color = color;
     }
 
-
     public static void main(String[] args) {
-
 
     }
 }

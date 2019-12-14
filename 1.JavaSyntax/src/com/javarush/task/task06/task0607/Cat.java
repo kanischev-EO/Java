@@ -6,7 +6,7 @@ package com.javarush.task.task06.task0607;
 
 public class Cat {
     //напишите тут ваш код
-    private static int catCount;
+    public static  int catCount;
     public Cat(){
         catCount++;
     }

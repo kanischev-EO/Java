@@ -8,21 +8,21 @@ import java.io.InputStreamReader;
 */
 
 public class Solution {
+
     public static void main(String[] args) throws Exception {
         //напишите тут ваш код
-        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        int sum = 0, count = 0;
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        double countSum = 0;
+        double count = 0;
         while (true){
-            int a =Integer.parseInt(bf.readLine());
-
-
-            if(a == -1){
-                double sr= sum *1. / count;
-                System.out.println(sr);
-
+            int enter = Integer.parseInt(bufferedReader.readLine());
+            if (enter == -1){
+                System.out.println(countSum /count);
+                break;
             }
             count++;
-            sum+=a;
+            countSum+=enter;
+
         }
     }
 }

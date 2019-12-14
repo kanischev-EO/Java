@@ -7,10 +7,10 @@ package com.javarush.task.task04.task0438;
 public class Solution {
     public static void main(String[] args) {
         //напишите тут ваш код
-        for(int i=0;i<9;i++){
+        for (int i = 0; i < 10; i++) {
             System.out.print(8);
         }
-        for (int j = 0; j <9 ; j++) {
+        for (int i = 0; i <=10 ; i++) {
             System.out.println(8);
         }
 

@@ -1,7 +1,6 @@
 package com.javarush.task.task06.task0606;
 
 import java.io.*;
-import java.io.InputStreamReader;
 
 /* 
 Чётные и нечётные циферки
@@ -14,16 +13,15 @@ public class Solution {
 
     public static void main(String[] args) throws IOException {
         //напишите тут ваш код
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String word = reader.readLine();
-        int num = Integer.parseInt(word);
-        while (num > 0) {
-            if (num % 2 == 0) {
-                even++;
-            } else if (num % 2 != 0) {
-                odd++;
-            }
-            num/=10;
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        String value = bufferedReader.readLine();
+        char[] oneValueArrays = value.toCharArray();
+        for (int i = 0; i < oneValueArrays.length ; i++) {
+            int oneVal = (int) oneValueArrays[i];
+            if(oneVal % 2 ==0 ) even++;
+            else odd++;
+
         }
-        System.out.println("Even:" + " " + even + " Odd:" + " " + odd);
-    }}
+        System.out.println("Even: " + even +  " Odd: " + odd);
+    }
+}
