@@ -12,59 +12,57 @@ public class Solution {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-        String grandFatherName = reader.readLine();
-        Cat catGrandFather = new Cat(grandFatherName);
+        String grandfatherName = reader.readLine();
+        Cat catGramfaher = new Cat(grandfatherName);
 
-        String grandMotherName = reader.readLine();
-        Cat catGrandMother = new Cat(grandMotherName);
+        String grandmotherName = reader.readLine();
+        Cat catGrammother = new Cat(grandmotherName);
 
         String fatherName = reader.readLine();
-        Cat catFather = new Cat(fatherName, null, catGrandFather);
+        Cat catFather = new Cat(fatherName, catGramfaher, null);
 
         String motherName = reader.readLine();
-        Cat catMother = new Cat(motherName, catGrandMother, null);
+        Cat catMother = new Cat(motherName, null, catGrammother);
 
         String sonName = reader.readLine();
-        Cat catSon = new Cat(sonName, catMother, catFather);
+        Cat catSon = new Cat(sonName, catFather, catMother);
 
+        String dotherName = reader.readLine();
+        Cat catDother = new Cat(dotherName, catFather, catMother);
 
-        String daughterName = reader.readLine();
-        Cat catDaughter = new Cat(daughterName, catMother, catFather);
-
-
-        System.out.println(catGrandFather);
-        System.out.println(catGrandMother);
+        System.out.println(catGramfaher);
+        System.out.println(catGrammother);
         System.out.println(catFather);
         System.out.println(catMother);
         System.out.println(catSon);
-        System.out.println(catDaughter);
+        System.out.println(catDother);
+
     }
 
     public static class Cat {
         private String name;
-        private Cat parent;
-        private Cat parent2;
+        private Cat father;
+        private Cat mother;
 
-        Cat(String name) {
-
+         public Cat(String name) {
             this.name = name;
         }
 
-        Cat(String name, Cat parent, Cat parent2) {
+        Cat(String name, Cat father, Cat mother) {
             this.name = name;
-            this.parent = parent;
-            this.parent2 = parent2;
+            this.father = father;
+            this.mother = mother;
         }
 
         @Override
         public String toString() {
-            if (parent == null && parent2 == null)
-                return "The cat's name is " + name + ", no mother" + ", no father";
-            else if (parent == null && parent2 != null)
-                return "The cat's name is " + name + ", no mother" + ", father is " + parent2.name;
-            else if (parent != null && parent2 == null)
-                return "The cat's name is  " + name + ", mother is " + parent.name + ", no father";
-            else return "The cat's name is  " + name + ", mother is " + parent.name + ", father is " + parent2.name;
+            if (father == null && mother == null)
+                return "The cat's name is " + name + ", no mother, no father";
+            else if (mother == null)
+                return "The cat's name is " + name + ", no mother, father is " + father.name;
+            else if (father == null)
+                return "The cat's name is " + name + ", mother is " + mother.name + ", no father";
+            return "The cat's name is " + name + ", mother is " + mother.name + ", father is " + father.name;
         }
     }
 

@@ -5,18 +5,17 @@ package com.javarush.task.task06.task0617;
 */
 
 public class Solution {
-    public static void printIdea(Idea idea) {
-        System.out.print(idea.getDescription());
-    }
-
     public static void main(String[] args) {
         printIdea(new Idea());
     }
-
-    public static class Idea {
-        public String getDescription() {
-            return "name";
+    public static void printIdea(Idea idea){
+        System.out.println(idea.getDescription());
+    }
+    public static class Idea{
+        public String getDescription(){
+            return "Любая строка";
         }
     }
+
     //напишите тут ваш код
 }

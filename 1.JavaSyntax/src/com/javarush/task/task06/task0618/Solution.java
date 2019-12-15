@@ -11,7 +11,6 @@ public class Solution {
 
     public static void main(String[] args) {
         //напишите тут ваш код
-        KissMyShinyMetalAss ks = new KissMyShinyMetalAss();
-        System.out.println(ks);
+        System.out.println(new KissMyShinyMetalAss());
     }
 }

@@ -6,6 +6,7 @@ package com.javarush.task.task06.task0613;
 
 public class Solution {
     public static void main(String[] args) {
+        // Создай 10 котов
         new Cat();
         new Cat();
         new Cat();
@@ -17,13 +18,17 @@ public class Solution {
         new Cat();
         new Cat();
         System.out.println(Cat.catCount);
+
+        // Выведи значение переменной catCount
     }
 
     public static class Cat {
+        // Создай статическую переменную catCount
         public static int catCount;
 
-        public Cat(){
+        public Cat() {
             catCount++;
         }
+        // Создай конструктор
     }
 }

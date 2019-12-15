@@ -10,36 +10,32 @@ import java.io.InputStreamReader;
 public class ConsoleReader {
     public static String readString() throws Exception {
         //напишите тут ваш код
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String readStr = reader.readLine();
-        return readStr;
-
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        String enter = bufferedReader.readLine();
+        return enter;
     }
 
     public static int readInt() throws Exception {
         //напишите тут ваш код
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        int readIn = Integer.parseInt(reader.readLine());
-        return readIn;
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        int enter = Integer.parseInt(bufferedReader.readLine());
+        return enter;
 
     }
 
     public static double readDouble() throws Exception {
         //напишите тут ваш код
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String read = reader .readLine();
-        double readDob = Double.parseDouble(read);
-        return readDob;
-
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        double enter = Double.parseDouble((bufferedReader.readLine()));
+        return enter;
 
     }
 
     public static boolean readBoolean() throws Exception {
         //напишите тут ваш код
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String readb = reader.readLine();
-        boolean readBool = Boolean.parseBoolean(readb);
-        return  readBool;
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        boolean enter = Boolean.parseBoolean((bufferedReader.readLine()));
+        return enter;
 
     }
 

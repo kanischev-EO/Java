@@ -1,8 +1,6 @@
 package com.javarush.task.task06.task0614;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 /* 
 Статические коты
@@ -13,28 +11,28 @@ public class Cat {
     public static ArrayList<Cat> cats = new ArrayList<>();
 
     public Cat() {
-
-        
+        cats.add(this);
     }
 
     public static void main(String[] args) {
         //напишите тут ваш код
-        cats.add(new Cat());
-        cats.add(new Cat());
-        cats.add(new Cat());
-        cats.add(new Cat());
-        cats.add(new Cat());
-        cats.add(new Cat());
-        cats.add(new Cat());
-        cats.add(new Cat());
-        cats.add(new Cat());
-        cats.add(new Cat());
-
+        new Cat();
+        new Cat();
+        new Cat();
+        new Cat();
+        new Cat();
+        new Cat();
+        new Cat();
+        new Cat();
+        new Cat();
+        new Cat();
         printCats();
     }
 
     public static void printCats() {
-        //напишите тут ваш ;
-        for(int i = 0; i< 10; i++) System.out.println(cats.get(i));
+        //напишите тут ваш код
+        for (Cat cat: cats) {
+            System.out.println(cat);
+        }
     }
 }
