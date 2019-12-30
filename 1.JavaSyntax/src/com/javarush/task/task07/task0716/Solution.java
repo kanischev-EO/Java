@@ -10,8 +10,8 @@ public class Solution {
     public static void main(String[] args) {
         ArrayList<String> strings = new ArrayList<String>();
         strings.add("роза");
-        strings.add("лоза");
         strings.add("лира");
+        strings.add("лоза");
         strings = fix(strings);
 
         for (String string : strings) {
@@ -21,6 +21,12 @@ public class Solution {
 
     public static ArrayList<String> fix(ArrayList<String> strings) {
         //напишите тут ваш код
-        return null;
+        ArrayList<String> copyStrings = new ArrayList<>(strings);
+        for (String value : copyStrings) {
+            if(value.contains("р") && value.contains("л")) continue;
+            else if (value.contains("р")) strings.remove(value);
+            else if (value.contains("л")) strings.add(value);
+        }
+        return strings;
     }
 }

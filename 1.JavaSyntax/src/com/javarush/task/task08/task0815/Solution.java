@@ -10,31 +10,39 @@ import java.util.Map;
 public class Solution {
     public static Map<String, String> createMap() {
         //напишите тут ваш код
-        Map<String, String> nameFullname = new HashMap<>();
-        nameFullname.put("Пупкин", "Василий");
-        nameFullname.put("Бупкин", "Генадий");
-        nameFullname.put("Гупкин", "Петр");
-        nameFullname.put("Упкин", "Сергей");
-        nameFullname.put("Нупкин", "Евгений");
-        nameFullname.put("Супкин", "Гнаий");
-        nameFullname.put("Снуппи", "Ген");
-        nameFullname.put("Валли", "Генади");
-        nameFullname.put("Гайяна", "Генадй");
-        nameFullname.put("Кент", "Гнадий");
-        return nameFullname;
+        Map<String, String> namesPeople = new HashMap<>();
+        namesPeople.put("Канищев", "Евгений");
+        namesPeople.put("Бедов", "Андрей");
+        namesPeople.put("Никонова", "Светлана");
+        namesPeople.put("Стрикаленко", "Дмитрий");
+        namesPeople.put("Гусар", "Михаил");
+        namesPeople.put("Шайкин", "Игорь");
+        namesPeople.put("Новиков", "Дмитрий");
+        namesPeople.put("Канищев", "Николай");
+        namesPeople.put("Дмитриев", "Алексей");
+        namesPeople.put("Иванов", "Михаил");
+        return  namesPeople;
 
     }
 
-    public static void getCountTheSameFirstName(Map<String, String> map, String name) {
+    public static int getCountTheSameFirstName(Map<String, String> map, String name) {
         //напишите тут ваш код
-
-
+        int countSameName = 0;
+        for (Map.Entry<String, String> names : map.entrySet()) {
+            if(name.equalsIgnoreCase(names.getValue()))countSameName++;
+        }
+        return countSameName;
 
     }
 
     public static int getCountTheSameLastName(Map<String, String> map, String lastName) {
         //напишите тут ваш код
-return 0;
+        int countSameLastName = 0;
+        for (Map.Entry<String, String> names : map.entrySet()) {
+            if(lastName.equalsIgnoreCase(names.getKey()))countSameLastName++;
+        }
+        return countSameLastName;
+
     }
 
     public static void main(String[] args) {

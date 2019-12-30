@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.List;
 
 /* 
 Самые-самые
@@ -13,29 +12,31 @@ import java.util.List;
 public class Solution {
     public static void main(String[] args) throws IOException {
         //напишите тут ваш код
-        List<String> list = new ArrayList<>();
-        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        int max = 0;
-        int min = 0;
-        int indexMaxValue = 0;
-        int indexMinValue = 0;
-        for (int i = 0; i < 10; i++) {
-            String enter = bf.readLine();
-            list.add(enter);
-            if (i == 0) {
-                min = enter.length();
-                indexMinValue = i;
-                max = enter.length();
-                indexMaxValue = i;
-            }
-            if (enter.length() > max) {
-                max = enter.length();
-                indexMaxValue = i;
-            } else if (enter.length() < min) {
-                min = enter.length();
-                indexMinValue = i;
+        ArrayList<String> list = new ArrayList<>();
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        int lenghtMaxString = 0;
+        int indexMaxString = 0;
+        int lenghtMinString = 0;
+        int indexMinString = 0;
+        String valueMaxString = null;
+        String valueMinString = null;
+
+        for (int i = 0; i < 10 ; i++) {
+            list.add(bufferedReader.readLine());
+        }
+        for (String value: list) {
+            if(value.length() > lenghtMaxString ){
+                lenghtMaxString = value.length();
+                indexMaxString =list.indexOf(value);
+                valueMaxString = value;
+            }else if ( value.length() < lenghtMinString || lenghtMinString == 0){
+                lenghtMinString = value.length();
+                indexMinString = list.indexOf(value);
+                valueMinString = value;
             }
         }
-        System.out.println(list.get(Math.min(indexMaxValue, indexMinValue)));
+        String enter = indexMaxString > indexMinString ? valueMinString : valueMaxString;
+        System.out.println(enter);
+
     }
 }

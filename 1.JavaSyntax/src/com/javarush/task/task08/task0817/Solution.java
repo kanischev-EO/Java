@@ -1,5 +1,6 @@
 package com.javarush.task.task08.task0817;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -10,45 +11,53 @@ import java.util.Map;
 public class Solution {
     public static Map<String, String> createMap() {
         //напишите тут ваш код
-        Map<String, String> myMap = new HashMap<>();
-        myMap.put("Пупкин", "Геннадий");
-        myMap.put("Самсонов", "Василий");
-        myMap.put("Галкин", "Демид");
-        myMap.put("Авдееж", "Евгений");
-        myMap.put("Тулинов", "Иван");
-        myMap.put("Джакоко", "Надежда");
-        myMap.put("Авось", "Владимир");
-        myMap.put("Принц", "Дмитрий");
-        myMap.put("Сом", "Геннадий");
-        myMap.put("Тупинов", "Валя");
-        return myMap;
+        Map<String, String> mapa = new HashMap<>();
+        mapa.put("Новиков", "Евгений");
+        mapa.put("Мигунов", "Андрей");
+        mapa.put("Васькин", "Андрей");
+        mapa.put("Шайкин", "Евгений");
+        mapa.put("Дмитриев", "Евгений");
+        mapa.put("Иванов", "Евгений");
+        mapa.put("Гусар", "Олег");
+        mapa.put("Бедов", "Олег");
+        mapa.put("Ковалев", "Максим");
+        mapa.put("Никонова", "Светлана");
+        return mapa;
+
 
     }
 
     public static void removeTheFirstNameDuplicates(Map<String, String> map) {
         //напишите тут ваш код
-        Map<String, String> myMap = new HashMap<>(map);
-        int count = 0;
-        String name = null;
-        for (Map.Entry<String, String> entry: myMap.entrySet()) {
-            String value = entry.getValue();
-            for (Map.Entry<String, String> entry1: myMap.entrySet()) {
-                if(entry1.getValue().equalsIgnoreCase(value)) {
-                    count++;
-                    name=entry1.getValue();
-                }
-                if(count>1) removeItemFromMapByValue(map, name);
 
-            }
-
+//        ArrayList<String> listNames = new ArrayList<>(map.values());
+////
+////        for (int i = 0; i < listNames.size()-1;i++) {
+////            String name = listNames.get(i);
+////            for (int j = i + 1; j < listNames.size(); j++) {
+////                if(listNames.get(j).equalsIgnoreCase(name)){
+////                    removeItemFromMapByValue(map, name);
+////                }
+////            }
+////        }
+        Map<String, Integer> mapFirstNameCount = new HashMap<>();
+        for (String firstName : map.values()) {
+            Integer nameCounts = mapFirstNameCount.getOrDefault(firstName, 0);
+            mapFirstNameCount.put(firstName, ++nameCounts);
         }
 
+        for (Map.Entry<String, Integer> entry : mapFirstNameCount.entrySet()) {
+            if (entry.getValue() > 1) {
+                removeItemFromMapByValue(map, entry.getKey());
+            }
+        }
 
 
 
     }
 
-    public static void removeItemFromMapByValue(Map<String, String> map, String value) {//удаление элемента по передаваемому значению
+
+    public static void removeItemFromMapByValue(Map<String, String> map, String value) {
         Map<String, String> copy = new HashMap<>(map);
         for (Map.Entry<String, String> pair : copy.entrySet()) {
             if (pair.getValue().equals(value)) {
@@ -58,5 +67,9 @@ public class Solution {
     }
 
     public static void main(String[] args) {
+        Map<String, String> mapa = createMap();
+        removeTheFirstNameDuplicates(mapa);
+        System.out.println(mapa);
+
     }
 }

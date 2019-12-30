@@ -9,28 +9,28 @@ import java.util.Map;
 
 public class Solution {
     public static void main(String[] args) {
-        Map<String, String> map = createPeopleList();
-        printPeopleList(map);
+        Map<String, String> map = createPeopleMap();
+        printPeopleMap(map);
     }
 
-    public static Map<String, String> createPeopleList() {
+    public static Map<String, String> createPeopleMap() {
         //напишите тут ваш код
-        Map<String, String> map = new HashMap<>();
-        map.put("Пупкин", "Вася");
-        map.put("Ляля", "Вася");
-        map.put("Пупкин", "Эмиль");
-        map.put("Газель", "Надя");
-        map.put("Газель", "Надя");
-        map.put("Газель", "Надя");
-        map.put("Газель", "Надя");
-        map.put("Газель", "Надя");
-        map.put("Газель", "Надя");
-        map.put("Газель", "Надя");
+        Map<String, String> mapa = new HashMap<>();
+        mapa.put("Новиков", "Евгений");
+        mapa.put("Мигунов", "Андрей");
+        mapa.put("Васькин", "Андрей");
+        mapa.put("Шайкин", "Евгений");
+        mapa.put("Гусар", "Евгений");
+        mapa.put("Иванов", "Евгений");
+        mapa.put("Гусар", "Олег");
+        mapa.put("Бедов", "Олег");
+        mapa.put("Ковалев", "Максим");
+        mapa.put("Васькин", "Евгений");
 
-        return map;
+        return mapa;
     }
 
-    public static void printPeopleList(Map<String, String> map) {
+    public static void printPeopleMap(Map<String, String> map) {
         for (Map.Entry<String, String> s : map.entrySet()) {
             System.out.println(s.getKey() + " " + s.getValue());
         }

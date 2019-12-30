@@ -1,9 +1,14 @@
 package com.javarush.task.task08.task0822;
 
+import sun.plugin.javascript.navig.Link;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
 
 /* 
 Минимальное из N чисел
@@ -17,18 +22,19 @@ public class Solution {
 
     public static int getMinimum(List<Integer> array) {
         // Найти минимум тут
-        Collections.sort(array);
-        return array.get(0);
+        return Collections.min(array);
     }
 
     public static List<Integer> getIntegerList() throws IOException {
         // Создать и заполнить список тут
-        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        int enter = Integer.parseInt(bf.readLine());
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(bufferedReader.readLine());
         List<Integer> list = new ArrayList<>();
-        for (int i = 0; i < enter; i++) {
-            list.add(Integer.parseInt(bf.readLine()));
+        for (int i = 0; i < n ; i++) {
+            list.add(Integer.parseInt(bufferedReader.readLine()));
         }
+
+
         return list;
     }
 }

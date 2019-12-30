@@ -1,10 +1,14 @@
 package com.javarush.task.task08.task0826;
 
+import org.omg.PortableInterceptor.INACTIVE;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.List;
 
 /* 
 Пять победителей
@@ -29,17 +33,11 @@ public class Solution {
 
     public static void sort(int[] array) {
         //напишите тут ваш код
-        ArrayList<Integer> list = new ArrayList<>();
-        Arrays.sort(array);
-        for (int i = 0; i <array.length ; i++) {
-            list.add(array[i]);
-
+        int[] copy = array;
+        Arrays.sort(copy);
+        for (int i = 0; i < copy.length ; i++) {
+            array[i] = copy[copy.length-1- i];
         }
-        Collections.reverse(list);
-        for (int i = 0; i <array.length ; i++) {
-            array[i] =list.get(i);
-        }
-
 
 
     }

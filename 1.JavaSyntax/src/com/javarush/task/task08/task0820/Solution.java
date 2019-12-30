@@ -1,6 +1,6 @@
 package com.javarush.task.task08.task0820;
 
-import javax.swing.text.html.CSS;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -21,19 +21,17 @@ public class Solution {
     }
 
     public static Set<Cat> createCats() {
-        Set<Cat> result = new HashSet<Cat>();
-        for (int i = 0; i < 4; i++) {
-            result.add(new Cat());
+        Set<Cat> cats = new HashSet<Cat>();
+        for (int i = 0; i < 4 ; i++) {
+            cats.add(new Cat());
         }
-
         //напишите тут ваш код
-
-        return result;
+        return cats;
     }
 
     public static Set<Dog> createDogs() {
         //напишите тут ваш код
-        Set<Dog> dogs = new HashSet<Dog>();
+        Set<Dog> dogs = new HashSet<>();
         for (int i = 0; i < 3 ; i++) {
             dogs.add(new Dog());
         }
@@ -42,31 +40,26 @@ public class Solution {
 
     public static Set<Object> join(Set<Cat> cats, Set<Dog> dogs) {
         //напишите тут ваш код
-        Set<Object> pets = new HashSet<>();
-        pets.addAll(cats);
-        pets.addAll(dogs);
-        return pets;
+        Set<Object> animals = new HashSet<>(cats);
+        animals.addAll(dogs);
+        return animals;
     }
 
     public static void removeCats(Set<Object> pets, Set<Cat> cats) {
         //напишите тут ваш код
-        Set<Object> copyPets = new HashSet<>(pets);
-        for (Cat catik: cats) {
-            if(copyPets.contains(catik)) pets.remove(catik);
-
-        }
-
-        }
-
-    public static void printPets(Set<Object> pets) {
-        //напишите тут ваш код
-        for (Object myAnimal: pets) {
-            System.out.println(myAnimal);
-
+        for (Cat catik : cats) {
+            if(pets.contains(catik)) pets.remove(catik);
         }
     }
 
-    //напишите тут ваш код
-    public static class Dog{}
+    public static void printPets(Set<Object> pets) {
+        //напишите тут ваш код
+        for (Object animals : pets ) {
+            System.out.println(animals);
+        }
+    }
     public static class Cat{}
+    public static class Dog{}
+
+    //напишите тут ваш код
 }
