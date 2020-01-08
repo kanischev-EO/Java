@@ -12,16 +12,14 @@ public class Solution {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String string = reader.readLine();
-        char [] charArray = string.toCharArray(); // стринг аррей в чар
-        charArray[0] = Character.toUpperCase(charArray[0]); // символ в ячейке с индексом 0 получает метод заглавной буквы
-
-        for (int i=0; i < charArray.length - 1; i++)
-        {
-            if (charArray[i] == ' ') // если встречаешь пробел, тогда
-                charArray [i + 1] = Character.toUpperCase(charArray[i + 1]); // переходи в следующюю ячейку и делай ей апперКейс метод
+        char[] charArray = string.toCharArray();
+        charArray[0] = Character.toUpperCase(charArray[0]);
+        for (int i=1; i < charArray.length; i++) {
+            if (charArray[i - 1] == ' ') // если встречаешь пробел, тогда
+                charArray [i] = Character.toUpperCase(charArray[i]); // переходи в следующюю ячейку и делай ей апперКейс метод
         }
         System.out.println(charArray);
+
+        //напишите тут ваш код
     }
-
-
 }

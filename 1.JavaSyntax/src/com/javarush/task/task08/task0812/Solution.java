@@ -26,7 +26,7 @@ public class Solution {
             valueForArrays.add(i, 1);
 
         }
-        for (int i = 0; i < list.size(); i++) {
+        for (int i = 0; i < list.size() - 1; i++) {
             if (i == list.size() - 1 ) break;
             if (list.get(i) == list.get(i + 1)) {
                 int value = valueForArrays.get(count) + 1;
@@ -34,6 +34,7 @@ public class Solution {
             }else ++count;
         }
         Collections.sort(valueForArrays);
-        System.out.println(Collections.max(valueForArrays));
+        int max = Collections.max(valueForArrays) > 1 ? Collections.max(valueForArrays) : 0;
+        System.out.println(max);
     }
 }
