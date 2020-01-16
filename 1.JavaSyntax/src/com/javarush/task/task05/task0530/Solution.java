@@ -1,7 +1,6 @@
 package com.javarush.task.task05.task0530;
 
 import java.io.*;
-import java.io.BufferedReader;
 
 /* 
 Шеф, что-то не пашет

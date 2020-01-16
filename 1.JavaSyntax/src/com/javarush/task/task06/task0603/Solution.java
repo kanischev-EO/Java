@@ -6,11 +6,11 @@ package com.javarush.task.task06.task0603;
 
 public class Solution {
     public static void main(String[] args) {
-       for(int i = 0; i < 50000; i++) {
+        // напишите тут ваш код
+        for (int i = 0; i < 50000 ; i++) {
             new Cat();
             new Dog();
         }
-        // напишите тут ваш код
     }
 }
 

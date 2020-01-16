@@ -17,8 +17,8 @@ public class Solution {
 
     public static Object createLinkedList() {
         //напишите тут ваш код
-        LinkedList list = new LinkedList();
-        return list;
+        LinkedList list1 = new LinkedList();
+        return list1;
 
     }
 

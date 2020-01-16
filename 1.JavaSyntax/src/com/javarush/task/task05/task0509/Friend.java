@@ -5,10 +5,11 @@ package com.javarush.task.task05.task0509;
 */
 
 public class Friend {
+    //напишите тут ваш код
     String name;
     int age;
     char sex;
-    public  void initialize(String name){
+    public void initialize(String name){
         this.name = name;
     }
     public void initialize(String name, int age){

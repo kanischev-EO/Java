@@ -2,9 +2,7 @@ package com.javarush.task.task07.task0728;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 
 /* 
 В убывающем порядке
@@ -27,16 +25,11 @@ public class Solution {
 
     public static void sort(int[] array) {
         //напишите тут ваш код
-        Arrays.sort(array);
-        int [] array1 = new int[20];
-        for (int i = 0; i <array.length; i++) {
-            array1[i] = array[array.length-1-i];
+        int[] copyArray = Arrays.copyOf(array,array.length);
+        Arrays.sort(copyArray);
+        for (int i = 0; i < copyArray.length ; i++) {
+            array[i] =copyArray[copyArray.length - 1 - i];
         }
-        for (int i = 0; i <array.length; i++) {
-            array[i] = array1[i];
-        }
-
-
 
     }
 }
