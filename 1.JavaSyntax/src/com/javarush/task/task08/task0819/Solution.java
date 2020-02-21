@@ -11,8 +11,8 @@ public class Solution {
     public static void main(String[] args) {
         Set<Cat> cats = createCats();
         Cat cat = null;
-        for (Cat catok: cats) {
-            cat = catok;
+        for (Cat pet: cats) {
+            cat = pet;
         }
         cats.remove(cat);
 
@@ -24,11 +24,11 @@ public class Solution {
 
     public static Set<Cat> createCats() {
         //напишите тут ваш код. step 2 - пункт 2
-        Set<Cat> catiti = new HashSet<>();
-        catiti.add(new Cat());
-        catiti.add(new Cat());
-        catiti.add(new Cat());
-        return catiti;
+        Set<Cat> cats = new HashSet<>();
+        cats.add(new Cat());
+        cats.add(new Cat());
+        cats.add(new Cat());
+        return cats;
     }
 
     public static void printCats(Set<Cat> cats) {

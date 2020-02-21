@@ -14,9 +14,9 @@ public class Solution {
         String string = reader.readLine();
         char[] charArray = string.toCharArray();
         charArray[0] = Character.toUpperCase(charArray[0]);
-        for (int i=1; i < charArray.length; i++) {
+        for (int i = 1; i < charArray.length; i++) {
             if (charArray[i - 1] == ' ') // если встречаешь пробел, тогда
-                charArray [i] = Character.toUpperCase(charArray[i]); // переходи в следующюю ячейку и делай ей апперКейс метод
+                charArray[i] = Character.toUpperCase(charArray[i]); // переходи в следующюю ячейку и делай ей апперКейс метод
         }
         System.out.println(charArray);
 

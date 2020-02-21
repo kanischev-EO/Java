@@ -13,29 +13,29 @@ public class Solution {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
         String grandfatherName = reader.readLine();
-        Cat catGramfaher = new Cat(grandfatherName);
+        Cat catGrandfather = new Cat(grandfatherName);
 
         String grandmotherName = reader.readLine();
-        Cat catGrammother = new Cat(grandmotherName);
+        Cat catGrandmother = new Cat(grandmotherName);
 
         String fatherName = reader.readLine();
-        Cat catFather = new Cat(fatherName, catGramfaher, null);
+        Cat catFather = new Cat(fatherName, catGrandfather, null);
 
         String motherName = reader.readLine();
-        Cat catMother = new Cat(motherName, null, catGrammother);
+        Cat catMother = new Cat(motherName, null, catGrandmother);
 
         String sonName = reader.readLine();
         Cat catSon = new Cat(sonName, catFather, catMother);
 
-        String dotherName = reader.readLine();
-        Cat catDother = new Cat(dotherName, catFather, catMother);
+        String daughterName = reader.readLine();
+        Cat catDaughter = new Cat(daughterName, catFather, catMother);
 
-        System.out.println(catGramfaher);
-        System.out.println(catGrammother);
+        System.out.println(catGrandfather);
+        System.out.println(catGrandmother);
         System.out.println(catFather);
         System.out.println(catMother);
         System.out.println(catSon);
-        System.out.println(catDother);
+        System.out.println(catDaughter);
 
     }
 

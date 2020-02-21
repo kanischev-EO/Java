@@ -16,25 +16,27 @@ public class Solution {
         System.out.println(woman);
         System.out.println(woman1);
     }
-public static class Man{
+
+    public static class Man {
         String name, address;
         int age;
 
-    public Man(String name,int age, String address ) {
-        this.name = name;
-        this.age = age;
-        this.address = address;
+        public Man(String name, int age, String address) {
+            this.name = name;
+            this.age = age;
+            this.address = address;
 
+        }
+
+        @Override
+        public String toString() {
+            return "name " + name +
+                    " age " + age +
+                    " address " + address;
+        }
     }
 
-    @Override
-    public String toString() {
-        return "name " + name +
-                " age " + age +
-                " address " + address;
-    }
-}
-    public static class Woman{
+    public static class Woman {
         String name, address;
         int age;
 

@@ -10,7 +10,7 @@ import java.io.InputStreamReader;
 public class Solution {
     public static void main(String[] args) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String[] array = new String[20];
+        String[] array = new String[5];
         for (int i = 0; i < array.length; i++) {
             array[i] = reader.readLine();
         }
@@ -27,10 +27,10 @@ public class Solution {
         String enter = null;
         for (int i = 0; i < array.length - 1; i++) {
             for (int j = i + 1; j < array.length; j++)
-                if (isGreaterThan(array[i] ,array[j])) { //a и b
-                    enter = array[j];
-                    array[j] = array[i];
-                    array[i] = enter;
+                if (isGreaterThan(array[i] ,array[j])) { //a (2) и b (1)
+                    enter = array[i];
+                    array[i] = array[j];
+                    array[j] = enter;
                 }
 
         }

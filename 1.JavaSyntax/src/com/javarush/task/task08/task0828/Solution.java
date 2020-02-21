@@ -15,18 +15,18 @@ public class Solution {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         String month = bufferedReader.readLine();
         Map<String, Integer > seasons = new HashMap<>();
-        seasons.put("January", 1);
-        seasons.put("February", 2);
-        seasons.put("March", 3);
-        seasons.put("April", 4);
-        seasons.put("May", 5);
-        seasons.put("June", 6);
-        seasons.put("July", 7);
-        seasons.put("August", 8);
-        seasons.put("September", 9);
-        seasons.put("October", 10);
-        seasons.put("November", 11);
-        seasons.put("December", 12);
+        seasons.put("january", 1);
+        seasons.put("february", 2);
+        seasons.put("march", 3);
+        seasons.put("april", 4);
+        seasons.put("may", 5);
+        seasons.put("june", 6);
+        seasons.put("july", 7);
+        seasons.put("august", 8);
+        seasons.put("september", 9);
+        seasons.put("october", 10);
+        seasons.put("november", 11);
+        seasons.put("december", 12);
         System.out.println( month +" is the " + seasons.get(month) + " month");
     }
 }

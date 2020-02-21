@@ -16,7 +16,7 @@ public class Solution {
     public static boolean isDateOdd(String date) {
         Date dateNow = new Date(date);
         Date dateOld = new Date(dateNow.getYear(), 0,0);
-        long differenceDate = (dateNow.getTime() - dateOld.getTime()) / (60 * 60 * 1000 * 24);
+        long differenceDate = (dateNow.getTime() - dateOld.getTime()) / (1000 * 60 * 60 * 24);
         return differenceDate % 2 == 0 ? false : true ;
     }
 }

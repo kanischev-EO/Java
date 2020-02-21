@@ -17,7 +17,7 @@ public class Solution {
         String value = bufferedReader.readLine();
         char[] oneValueArrays = value.toCharArray();
         for (int i = 0; i < oneValueArrays.length ; i++) {
-            int oneVal = (int) oneValueArrays[i];
+            int oneVal = oneValueArrays[i];
             if(oneVal % 2 ==0 ) even++;
             else odd++;
 

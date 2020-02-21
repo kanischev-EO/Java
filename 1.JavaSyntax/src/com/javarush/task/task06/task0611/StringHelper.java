@@ -4,6 +4,7 @@ package com.javarush.task.task06.task0611;
 Класс StringHelper
 */
 
+
 public class StringHelper {
     public static String multiply(String s) {
         String result = "";
@@ -24,6 +25,7 @@ public class StringHelper {
     }
 
     public static void main(String[] args) {
+        System.out.println(multiply("Амиго", 2));
 
     }
 }

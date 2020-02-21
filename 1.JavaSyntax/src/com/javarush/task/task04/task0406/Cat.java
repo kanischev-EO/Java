@@ -8,8 +8,7 @@ public class Cat {
     private String fullName;
 
     public void setName(String firstName, String lastName) {
-        String fullName = firstName + " " + lastName;
-        this.fullName = fullName;
+        this.fullName = firstName + " " + lastName;
 
         //напишите тут ваш код
     }

@@ -28,7 +28,7 @@ public class Solution {
         }
         // Read the house number
         String cityName = reader.readLine();
-        if (cityName != null || !(cityName.isEmpty())) {
+        if (!cityName.isEmpty() || cityName == null) {
             String familyName = map.get(cityName);
             System.out.println(familyName);
 

@@ -10,9 +10,9 @@ import java.io.*;
 public class Solution {
 
     public static void main(String[] args) throws IOException {
-        BufferedReader bis = new BufferedReader(new InputStreamReader(System.in));
-        double weight = Double.parseDouble(bis.readLine());
-        double height = Double.parseDouble(bis.readLine());
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        double weight = Double.parseDouble(bufferedReader.readLine());
+        double height = Double.parseDouble(bufferedReader.readLine());
 
         Body.calculateMassIndex(weight, height);
     }

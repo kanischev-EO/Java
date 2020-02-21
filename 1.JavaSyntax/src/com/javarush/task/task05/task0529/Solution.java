@@ -15,8 +15,7 @@ public class Solution {
             String s = buffer.readLine();
             if (s.equals("сумма")){
                 break;}
-            int count = Integer.parseInt(s);
-            countSum += count;
+            countSum += Integer.parseInt(s);
         }
         System.out.println(countSum);
     }}

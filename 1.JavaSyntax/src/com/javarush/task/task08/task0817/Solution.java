@@ -67,9 +67,6 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        Map<String, String> mapa = createMap();
-        removeTheFirstNameDuplicates(mapa);
-        System.out.println(mapa);
 
     }
 }

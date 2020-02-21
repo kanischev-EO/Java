@@ -12,12 +12,12 @@ public class Solution
     public static void main(String[] args) throws Exception{
     BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
     int currentValue = Integer.parseInt(reader.readLine());
-    int maximum = 0;
-        for (int i = 0;currentValue >0;i++){
-            if(i == maximum) maximum = currentValue;
-
-           else if (currentValue > maximum) maximum = currentValue;
-            System.out.print(maximum);
+    int maxValue= 0;
+    if(currentValue> 0){
+        for (int i = 0; i < currentValue; i++) {
+            int enter = Integer.parseInt(reader.readLine());
+            if(enter>maxValue) maxValue = enter;
         }
-    }
-}
+        System.out.println(maxValue);
+
+}}}

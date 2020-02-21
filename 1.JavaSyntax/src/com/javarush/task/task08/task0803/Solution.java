@@ -24,7 +24,7 @@ public class Solution {
         Map<String, Cat> myMap = new HashMap<>();
 
         for (int i = 0; i <cats.length ; i++) {
-            myMap.put((String) cats[i], new Cat((String) cats[i]));
+            myMap.put(cats[i], new Cat(cats[i]));
         }
         return myMap;
 

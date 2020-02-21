@@ -7,7 +7,7 @@ package com.javarush.task.task06.task0603;
 public class Solution {
     public static void main(String[] args) {
         // напишите тут ваш код
-        for (int i = 0; i < 50000 ; i++) {
+        for (int i = 0; i < 50000; i++) {
             new Cat();
             new Dog();
         }

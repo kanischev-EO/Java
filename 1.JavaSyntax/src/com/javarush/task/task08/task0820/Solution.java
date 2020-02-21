@@ -14,9 +14,11 @@ public class Solution {
         Set<Dog> dogs = createDogs();
 
         Set<Object> pets = join(cats, dogs);
+        System.out.println("1 iteration");
         printPets(pets);
 
         removeCats(pets, cats);
+        System.out.println("2 iteration");
         printPets(pets);
     }
 
@@ -47,8 +49,8 @@ public class Solution {
 
     public static void removeCats(Set<Object> pets, Set<Cat> cats) {
         //напишите тут ваш код
-        for (Cat catik : cats) {
-            if(pets.contains(catik)) pets.remove(catik);
+        for (Cat cat : cats) {
+            if(pets.contains(cat)) pets.remove(cat);
         }
     }
 
