@@ -8,7 +8,7 @@ public class Solution {
     public static void main(String[] args) {
         //напишите тут ваш код
         Person person = new Person();
-        person.initialize("Мурзик", 14);
+        person.initialize("Вася", 10);
     }
 
     static class Person {
@@ -19,6 +19,5 @@ public class Solution {
             this.name = name;
             this.age = age;
         }
-
     }
 }

@@ -10,14 +10,15 @@ import java.util.Set;
 public class Solution {
     public static Set<String> createSet() {
         //напишите тут ваш код
-        Set<String> list= new HashSet<>();
-        for (int i = 0; i < 20 ; i++) {
-            list.add("Л"+i);
+        Set<String> strings = new HashSet<>();
+        for (int i = 0; i < 20; i++) {
+            strings.add("Л"+i);
         }
-        return list;
+        return strings;
 
     }
 
     public static void main(String[] args) {
+
     }
 }

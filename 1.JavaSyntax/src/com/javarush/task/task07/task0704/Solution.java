@@ -10,13 +10,13 @@ import java.io.InputStreamReader;
 public class Solution {
     public static void main(String[] args) throws Exception {
         //напишите тут ваш код
-        int[] value = new int[10];
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        for (int i = 0; i < value.length ; i++) {
-            value[i] = Integer.parseInt(bufferedReader.readLine());
+        int[] nums = new int[10];
+        for (int i = 0; i < nums.length ; i++) {
+            nums[i] = Integer.parseInt(bufferedReader.readLine());
         }
-        for (int i = value.length - 1; i >=0 ; i--) {
-            System.out.println(value[i]);
+        for (int i = nums.length-1; i >=0 ; i--) {
+            System.out.println(nums[i]);
         }
     }
 }

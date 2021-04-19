@@ -9,11 +9,12 @@ import java.net.URISyntaxException;
 
 public class Solution {
     public static void main(String[] args) throws Exception {
-
+        //напишите тут ваш код
         try {
             method1();
-        } catch (NullPointerException e) {
-        } catch (FileNotFoundException e) {
+
+        }catch (NullPointerException | FileNotFoundException e ){
+            System.out.println(e);
         }
 
 

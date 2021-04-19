@@ -10,6 +10,6 @@ public class Cat {
 
     }
     protected void finalize() throws Throwable{
-
+        super.finalize();
     }
 }

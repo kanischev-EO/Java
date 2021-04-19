@@ -7,8 +7,8 @@ package com.javarush.task.task05.task0506;
 public class Person {
     //напишите тут ваш код
     String name, address;
-    int age;
     char sex;
+    int age;
 
     public static void main(String[] args) {
 

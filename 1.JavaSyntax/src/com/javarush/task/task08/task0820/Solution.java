@@ -14,29 +14,30 @@ public class Solution {
         Set<Dog> dogs = createDogs();
 
         Set<Object> pets = join(cats, dogs);
-        System.out.println("1 iteration");
         printPets(pets);
+        System.out.println(" --------------");
 
         removeCats(pets, cats);
-        System.out.println("2 iteration");
         printPets(pets);
     }
 
     public static Set<Cat> createCats() {
-        Set<Cat> cats = new HashSet<Cat>();
-        for (int i = 0; i < 4 ; i++) {
-            cats.add(new Cat());
-        }
+        Set<Cat> result = new HashSet<Cat>();
+        result.add(new Cat());
+        result.add(new Cat());
+        result.add(new Cat());
+        result.add(new Cat());
         //напишите тут ваш код
-        return cats;
+
+        return result;
     }
 
     public static Set<Dog> createDogs() {
-        //напишите тут ваш код
         Set<Dog> dogs = new HashSet<>();
-        for (int i = 0; i < 3 ; i++) {
-            dogs.add(new Dog());
-        }
+        dogs.add(new Dog());
+        dogs.add(new Dog());
+        dogs.add(new Dog());
+        //напишите тут ваш код
         return dogs;
     }
 
@@ -49,19 +50,25 @@ public class Solution {
 
     public static void removeCats(Set<Object> pets, Set<Cat> cats) {
         //напишите тут ваш код
-        for (Cat cat : cats) {
-            if(pets.contains(cat)) pets.remove(cat);
+//
+        pets.removeAll(cats);
+
+
         }
-    }
+    
 
     public static void printPets(Set<Object> pets) {
         //напишите тут ваш код
-        for (Object animals : pets ) {
-            System.out.println(animals);
+        for (Object оbj: pets) {
+            System.out.println(оbj);
         }
     }
-    public static class Cat{}
-    public static class Dog{}
+
+    private static class Dog {
+    }
+
+    private static class Cat {
+    }
 
     //напишите тут ваш код
 }

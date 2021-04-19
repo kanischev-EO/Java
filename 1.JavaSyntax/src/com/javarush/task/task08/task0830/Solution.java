@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 /* 
-Задача по алгоритмам
+Задача по алгоритмам Ӏ Java Syntax: 8 уровень, 11 лекция
 */
 
 public class Solution {
@@ -24,19 +24,16 @@ public class Solution {
 
     public static void sort(String[] array) {
         //напишите тут ваш код
-        String enter = null;
-        for (int i = 0; i < array.length - 1; i++) {
-            for (int j = i + 1; j < array.length; j++)
-                if (isGreaterThan(array[i] ,array[j])) { //a (2) и b (1)
-                    enter = array[i];
-                    array[i] = array[j];
-                    array[j] = enter;
+        for (int i = 0; i < array.length ; i++) {
+            for (int j = i; j < array.length ; j++) {
+                if (isGreaterThan(array[i], array[j])) {
+                    String value = array[j];
+                    array[j] = array[i];
+                    array[i] = value;
                 }
+            }
 
         }
-
-
-
     }
 
     //Метод для сравнения строк: 'а' больше чем 'b'

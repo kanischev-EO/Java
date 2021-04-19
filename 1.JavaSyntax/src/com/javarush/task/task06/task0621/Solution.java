@@ -12,30 +12,30 @@ public class Solution {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-        String grandfatherName = reader.readLine();
-        Cat catGrandfather = new Cat(grandfatherName);
+        String grandFatherName = reader.readLine();
+        Cat catGrandFather = new Cat(grandFatherName);
 
-        String grandmotherName = reader.readLine();
-        Cat catGrandmother = new Cat(grandmotherName);
+        String grandMotherName = reader.readLine();
+        Cat catGrandMother = new Cat(grandMotherName);
 
         String fatherName = reader.readLine();
-        Cat catFather = new Cat(fatherName, catGrandfather, null);
+        Cat catFather = new Cat(fatherName, catGrandFather, null);
 
         String motherName = reader.readLine();
-        Cat catMother = new Cat(motherName, null, catGrandmother);
+        Cat catMother = new Cat(motherName, null, catGrandMother);
 
         String sonName = reader.readLine();
         Cat catSon = new Cat(sonName, catFather, catMother);
 
-        String daughterName = reader.readLine();
-        Cat catDaughter = new Cat(daughterName, catFather, catMother);
-
-        System.out.println(catGrandfather);
-        System.out.println(catGrandmother);
+        String dotherName = reader.readLine();
+        Cat catDother = new Cat(dotherName, catFather, catMother);
+        System.out.println(catGrandFather);
+        System.out.println(catGrandMother);
         System.out.println(catFather);
         System.out.println(catMother);
         System.out.println(catSon);
-        System.out.println(catDaughter);
+        System.out.println(catDother);
+
 
     }
 
@@ -44,7 +44,7 @@ public class Solution {
         private Cat father;
         private Cat mother;
 
-         public Cat(String name) {
+        Cat(String name) {
             this.name = name;
         }
 
@@ -56,12 +56,12 @@ public class Solution {
 
         @Override
         public String toString() {
-            if (father == null && mother == null)
+            if (father == null && mother==null)
                 return "The cat's name is " + name + ", no mother, no father";
-            else if (mother == null)
-                return "The cat's name is " + name + ", no mother, father is " + father.name;
             else if (father == null)
                 return "The cat's name is " + name + ", mother is " + mother.name + ", no father";
+            else if (mother == null)
+                return "The cat's name is " + name + ",no mother, father is " + father.name;
             return "The cat's name is " + name + ", mother is " + mother.name + ", father is " + father.name;
         }
     }

@@ -7,7 +7,7 @@ package com.javarush.task.task01.task0103;
 public class Solution {
     public static void main(String[] args) {
         //напишите тут ваш код
-        int age = 3126 - 8;
-        System.out.println(age);
+        int ageFriend = 3126 - 8;
+        System.out.print(ageFriend);
     }
 }

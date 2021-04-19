@@ -10,13 +10,13 @@ import java.io.InputStreamReader;
 public class Solution {
     public static void main(String[] args) throws Exception {
         //напишите тут ваш код
-        String[] words = new String[10];
+        String[] strings = new String[10];
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        for (int i = 0; i < words.length - 2; i++) {
-            words[i] = bufferedReader.readLine();
+        for (int i = 0; i < 8; i++) {
+            strings[i] = bufferedReader.readLine();
         }
-        for (int i = words.length - 1; i >= 0 ; i--) {
-            System.out.println(words[i]);
+        for (int i = strings.length - 1; i >= 0 ; i--) {
+            System.out.println(strings[i]);
         }
     }
 }

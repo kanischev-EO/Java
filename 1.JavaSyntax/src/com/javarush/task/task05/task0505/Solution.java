@@ -5,17 +5,19 @@ package com.javarush.task.task05.task0505;
 */
 
 public class Solution {
+
     public static void main(String[] args) {
         //напишите тут ваш код
-        Cat cat = new Cat("Мурка", 12, 46, 32);
-        Cat cat1 = new Cat("Урка", 8, 20, 18);
-        Cat cat2 = new Cat("Мурзик", 20, 70,70);
-        System.out.println(cat.fight(cat1));
+        Cat cat1 = new Cat("Жора", 3, 4, 5);
+        Cat cat2 = new Cat("Нара", 3, 3, 3);
+        Cat cat3 = new Cat("Нытик", 1, 2, 2);
         System.out.println(cat1.fight(cat2));
-        System.out.println(cat2.fight(cat));
+        System.out.println(cat2.fight(cat3));
+        System.out.println(cat3.fight(cat1));
     }
 
     public static class Cat {
+
         protected String name;
         protected int age;
         protected int weight;
@@ -29,12 +31,13 @@ public class Solution {
         }
 
         public boolean fight(Cat anotherCat) {
-            int ageAdvantage = this.age > anotherCat.age ? 1 : 0;
-            int weightAdvantage = this.weight > anotherCat.weight ? 1 : 0;
-            int strengthAdvantage = this.strength > anotherCat.strength ? 1 : 0;
+            int ageScore = Integer.compare(this.age, anotherCat.age);
+            int weightScore = Integer.compare(this.weight, anotherCat.weight);
+            int strengthScore = Integer.compare(this.strength, anotherCat.strength);
 
-            int score = ageAdvantage + weightAdvantage + strengthAdvantage;
-            return score > 2; // return score > 2 ? true : false;
+            int score = ageScore + weightScore + strengthScore;
+
+            return score > 0; // return score > 0 ? true : false;
         }
     }
 }

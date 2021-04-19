@@ -1,9 +1,8 @@
 package com.javarush.task.task07.task0703;
 
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 
 /* 
 Общение одиноких массивов
@@ -11,16 +10,14 @@ import java.io.InputStreamReader;
 
 public class Solution {
     public static void main(String[] args) throws Exception {
-        //напишите тут ваш код
-        String[] words = new String[10];
-        int[] value = new int[10];
+        String[] strings = new String[10];
+        int[] nums = new int[10];
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        for (int i = 0; i < words.length ; i++) {
-            words[i] = bufferedReader.readLine();
-            value[i] = words[i].length();
+        for (int i = 0; i < 10; i++) {
+            strings[i] = bufferedReader.readLine();
+            nums[i] = strings[i].length();
         }
-        for (int i = 0; i < value.length ; i++) {
-            System.out.println(value[i]);
-        }
+        System.out.println(Arrays.toString(nums));
+        //напишите тут ваш код
     }
 }

@@ -10,19 +10,21 @@ import java.util.Set;
 public class Solution {
     public static Set<Integer> createSet() {
         // напишите тут ваш код
-        Set<Integer> list = new HashSet<>();
-        for (int i = 0; i < 20; i++) {
-            list.add(i);
+        Set<Integer> integers = new HashSet<>();
+        for (int i = 0; i < 20 ; i++) {
+            integers.add(i);
         }
-        return list;
+        return integers;
 
     }
 
     public static Set<Integer> removeAllNumbersGreaterThan10(Set<Integer> set) {
         // напишите тут ваш код
-        Set<Integer> copySet = new HashSet<>(set);
-        for (Integer value : copySet) {
-            if(value > 10) set.remove(value);
+        Set<Integer> copy = new HashSet<>(set);
+        for (Integer integers: copy) {
+            if(integers>10){
+                set.remove(integers);
+            }
         }
         return set;
 

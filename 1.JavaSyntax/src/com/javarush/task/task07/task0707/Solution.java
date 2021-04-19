@@ -9,13 +9,13 @@ import java.util.ArrayList;
 public class Solution {
     public static void main(String[] args) {
         //напишите тут ваш код
-        ArrayList<String> list = new ArrayList<>();
+        ArrayList<String> strings = new ArrayList<>();
         for (int i = 0; i < 5 ; i++) {
-            list.add("i = " + i);
+            strings.add("strings" +i);
         }
-        System.out.println(list.size());
-        for (int i = 0; i < list.size() ; i++) {
-            System.out.println(list.get(i));
+        System.out.println(strings.size());
+        for (int i = 0; i < strings.size() ; i++) {
+            System.out.println(strings.get(i));
         }
     }
 }

@@ -7,14 +7,16 @@ package com.javarush.task.task06.task0604;
 public class Cat {
     public static int catCount = 0;
 
-    public Cat(){
+    //напишите тут ваш код
+
+
+    public Cat() {
         catCount++;
     }
-    public void finalize(){
+    protected void finalize() throws Throwable{
         catCount--;
+        super.finalize();
     }
-
-    //напишите тут ваш код
 
     public static void main(String[] args) {
 

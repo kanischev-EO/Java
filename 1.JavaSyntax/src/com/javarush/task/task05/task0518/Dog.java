@@ -7,8 +7,9 @@ package com.javarush.task.task05.task0518;
 
 public class Dog {
     //напишите тут ваш код
-    String name, color;
+    String name;
     int height;
+    String color;
 
     public Dog(String name) {
         this.name = name;

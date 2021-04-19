@@ -9,9 +9,9 @@ import java.util.ArrayList;
 public class Solution {
     public static void main(String[] args) {
         ArrayList<String> strings = new ArrayList<String>();
-        strings.add("роза");
-        strings.add("лоза");
-        strings.add("лира");
+        strings.add("ола");
+        strings.add("зала");
+        strings.add("мала");
         strings = fix(strings);
 
         for (String string : strings) {
@@ -21,19 +21,18 @@ public class Solution {
 
     public static ArrayList<String> fix(ArrayList<String> strings) {
         //напишите тут ваш код
-        ArrayList<String> res = new ArrayList<>();
-        for (String s : strings)
-        {
-            if(s.contains("р") && s.contains("л")){
-                res.add(s);
-            } else if(s.contains("р")){
+        ArrayList<String> copyString = new ArrayList<>(strings);
+        for (String value : copyString) {
+            if (value.contains("р") && value.contains("л")) {
                 continue;
-            } else if(s.contains("л")){
-                res.add(s);
-                res.add(s);
-            } else {
-                res.add(s);
+            } else if (value.contains("р")) {
+                strings.remove(value);
+            } else if (value.contains("л")) {
+                strings.add(value);
             }
         }
-        return res;
-    }}
+        return strings;
+
+
+    }
+}

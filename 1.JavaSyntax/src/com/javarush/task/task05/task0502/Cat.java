@@ -14,26 +14,13 @@ public class Cat {
 
     public boolean fight(Cat anotherCat) {
         //напишите тут ваш код
-        int countThisCat = 0;
-        int countAnotherCat = 0;
-        int fightAge = this.age > anotherCat.age? countThisCat++ : countAnotherCat++;
-        int fightWeight = this.weight > anotherCat.weight? countThisCat++ : countAnotherCat++;
-        int fightStrength = this.strength > anotherCat.strength? countThisCat++ : countAnotherCat++;
-
-        return countThisCat > countAnotherCat ? true : false;
+        int compareAge = age > anotherCat.age ? 1: 0;
+        int compareWeight = weight > anotherCat.weight ? 1 :0;
+        int compareStrenght = strength > anotherCat.strength ? 1 : 0;
+        return compareAge + compareWeight + compareStrenght >=2 ? true :false;
     }
 
     public static void main(String[] args) {
-        Cat cat = new Cat();
-        cat.strength = 40;
-        cat.weight = 40;
-        cat.age = 10;
-        Cat cat2 = new Cat();
-        cat2.age = 20;
-        cat2.strength = 10;
-        cat2.weight = 40;
-        System.out.println(cat.fight(cat2));
-
 
     }
 }

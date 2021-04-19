@@ -9,35 +9,30 @@ import java.util.ArrayList;
 */
 
 public class Solution {
-
     public static void main(String[] args) throws Exception {
         // Считать строки с консоли и объявить ArrayList list тут
         ArrayList<String> list = new ArrayList<>();
-        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-
-        for (int i = 0; i < 10; i++) {
-            list.add(bf.readLine());
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        for (int i = 0; i < 10 ; i++) {
+            list.add(bufferedReader.readLine());
         }
 
-        list = doubleValues(list);
-
-        for (String s : list) {
-            System.out.println(s);
-        }
-
+        ArrayList<String> result = doubleValues(list);
 
         // Вывести на экран result
+        for (String str: result) {
+            System.out.println(str);
+        }
     }
 
     public static ArrayList<String> doubleValues(ArrayList<String> list) {
         //напишите тут ваш код
-        ArrayList<String> listNew = new ArrayList<>(list.size() * 2);
+        ArrayList<String > result = new ArrayList<>();
 
-        for (String s : list) {
-            listNew.add(s);
-            listNew.add(s);
+        for (String string: list) {
+            result.add(string);
+            result.add(string);
         }
-
-        return listNew;
+        return result;
     }
 }

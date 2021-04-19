@@ -9,13 +9,15 @@ import java.io.InputStreamReader;
 
 public class Solution {
     public static void main(String[] args) throws Exception {
-        BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));
-        int countSum = 0;
-        while (true) {
-            String s = buffer.readLine();
-            if (s.equals("сумма")){
-                break;}
-            countSum += Integer.parseInt(s);
+        //напишите тут ваш код
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        String enter;
+        int sum = 0;
+        while (!(enter=bufferedReader.readLine()).equals("сумма")){
+            sum+=Integer.parseInt(enter);
         }
-        System.out.println(countSum);
-    }}
+        System.out.println(sum);
+
+
+    }
+}

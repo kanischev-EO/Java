@@ -9,25 +9,19 @@ import java.util.ArrayList;
 */
 
 public class Solution {
-    private static ArrayList<String> strings;
-
     public static void main(String[] args) throws Exception {
         //напишите тут ваш код
-        strings = new ArrayList<>();
-        int minSizeStrings = 0;
-        String valueMinSizeStrings = null;
+        ArrayList<String> strings = new ArrayList<>();
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 5 ; i++) {
             strings.add(bufferedReader.readLine());
         }
-        for (String value : strings) {
-            if (value.length() < minSizeStrings || minSizeStrings == 0) {
-                minSizeStrings = value.length();
-                valueMinSizeStrings = value;
-            } else if (value.length() == minSizeStrings) {
-                valueMinSizeStrings += "\n" + value;
-            }
+        String minString =strings.get(0);
+        for (String s: strings) {
+            if(s.length()<minString.length()) minString = s;
         }
-        System.out.println(valueMinSizeStrings);
+        for (String s: strings) {
+            if(s.length() == minString.length()) System.out.println(s);
+        }
     }
 }

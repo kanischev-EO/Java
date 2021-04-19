@@ -12,31 +12,17 @@ import java.util.ArrayList;
 public class Solution {
     public static void main(String[] args) throws IOException {
         //напишите тут ваш код
-        ArrayList<String> list = new ArrayList<>();
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        int lenghtMaxString = 0;
-        int indexMaxString = 0;
-        int lenghtMinString = 0;
-        int indexMinString = 0;
-        String valueMaxString = null;
-        String valueMinString = null;
-
-        for (int i = 0; i < 10 ; i++) {
-            list.add(bufferedReader.readLine());
+        ArrayList<String> strings = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            strings.add(bufferedReader.readLine());
         }
-        for (String value: list) {
-            if(value.length() > lenghtMaxString ){
-                lenghtMaxString = value.length();
-                indexMaxString =list.indexOf(value);
-                valueMaxString = value;
-            }else if ( value.length() < lenghtMinString || lenghtMinString == 0){
-                lenghtMinString = value.length();
-                indexMinString = list.indexOf(value);
-                valueMinString = value;
-            }
+        String maxString = strings.get(0);
+        String minString = strings.get(0);
+        for (String s:strings) {
+            if(s.length()>maxString.length()) maxString = s;
+            if(s.length()<minString.length()) minString = s;
         }
-        String enter = indexMaxString > indexMinString ? valueMinString : valueMaxString;
-        System.out.println(enter);
-
+        System.out.println(strings.indexOf(maxString)> strings.indexOf(minString)?minString : maxString );
     }
 }

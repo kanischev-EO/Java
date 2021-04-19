@@ -20,19 +20,15 @@ public class Solution {
         // создай и заполни массив
         int[] nums = new int[20];
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        for (int i = 0; i < nums.length ; i++) {
-            nums[i]= Integer.parseInt(bufferedReader.readLine());
+        for (int i = 0; i < nums.length; i++) {
+            nums[i] = Integer.parseInt(bufferedReader.readLine());
         }
         return nums;
     }
 
     public static int max(int[] array) {
         // найди максимальное значение
-        int max = array[0];
-        for (int i = 0; i < array.length ; i++) {
-            if(array[i]> max) max = array[i];
-        }
-
-         return max;
+        Arrays.sort(array);
+        return array[array.length-1];
     }
 }

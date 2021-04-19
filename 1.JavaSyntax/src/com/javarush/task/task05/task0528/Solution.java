@@ -1,5 +1,8 @@
 package com.javarush.task.task05.task0528;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 /* 
 Вывести на экран сегодняшнюю дату
 */
@@ -7,6 +10,7 @@ package com.javarush.task.task05.task0528;
 public class Solution {
     public static void main(String[] args) {
         //напишите тут ваш код
-        System.out.println("12 12 2019");
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("d M yyyy");
+        System.out.println(simpleDateFormat.format(new Date()));
     }
 }

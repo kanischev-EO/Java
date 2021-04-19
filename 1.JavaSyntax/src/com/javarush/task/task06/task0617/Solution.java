@@ -13,7 +13,7 @@ public class Solution {
     }
     public static class Idea{
         public String getDescription(){
-            return "Любая строка";
+            return "любая строка";
         }
     }
 

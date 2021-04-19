@@ -17,16 +17,15 @@ public class Solution {
 
         while (true) {
             String name = reader.readLine();
+
             if (name == null || name.isEmpty()) {
                 break;
             }
             int age = Integer.parseInt(reader.readLine());
             int weight = Integer.parseInt(reader.readLine());
-            int tailLength = Integer.parseInt(reader.readLine());
+            int tail = Integer.parseInt(reader.readLine());
 
-
-
-            Cat cat = new Cat(name, age, weight, tailLength);
+            Cat cat = new Cat(name,age,weight,tail);
             CATS.add(cat);
         }
 

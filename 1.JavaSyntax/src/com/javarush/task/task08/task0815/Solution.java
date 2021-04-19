@@ -10,42 +10,47 @@ import java.util.Map;
 public class Solution {
     public static Map<String, String> createMap() {
         //напишите тут ваш код
-        Map<String, String> namesPeople = new HashMap<>();
-        namesPeople.put("Канищев", "Евгений");
-        namesPeople.put("Бедов", "Андрей");
-        namesPeople.put("Никонова", "Светлана");
-        namesPeople.put("Стрикаленко", "Дмитрий");
-        namesPeople.put("Гусар", "Михаил");
-        namesPeople.put("Шайкин", "Игорь");
-        namesPeople.put("Новиков", "Дмитрий");
-        namesPeople.put("Канищев", "Николай");
-        namesPeople.put("Дмитриев", "Алексей");
-        namesPeople.put("Иванов", "Михаил");
-        return  namesPeople;
+        Map<String, String> lastNameMap = new HashMap<>();
+        lastNameMap.put("Иванов", "Михаил");
+        lastNameMap.put("Канищев", "Евгений");
+        lastNameMap.put("Скарина", "Александра");
+        lastNameMap.put("Карепина", "Александра");
+        lastNameMap.put("Иванов", "Иван");
+        lastNameMap.put("Шайкин", "Игорь");
+        lastNameMap.put("Морозова", "Светлана");
+        lastNameMap.put("Никонова", "Светлана");
+        lastNameMap.put("Дмитриев", "Алексей");
+        lastNameMap.put("Новиков", "Дмитрий");
+        return lastNameMap;
 
     }
 
     public static int getCountTheSameFirstName(Map<String, String> map, String name) {
         //напишите тут ваш код
-        int countSameName = 0;
-        for (Map.Entry<String, String> names : map.entrySet()) {
-            if(name.equalsIgnoreCase(names.getValue()))countSameName++;
+        int count = 0;
+        for (Map.Entry<String, String> entr: map.entrySet()) {
+            if(entr.getValue().equals(name)){
+                count++;
+            }
         }
-        return countSameName;
+        return count;
 
     }
 
     public static int getCountTheSameLastName(Map<String, String> map, String lastName) {
         //напишите тут ваш код
-        int countSameLastName = 0;
-        for (Map.Entry<String, String> names : map.entrySet()) {
-            if(lastName.equalsIgnoreCase(names.getKey()))countSameLastName++;
+        int count = 0;
+        for (Map.Entry<String, String> entr: map.entrySet()) {
+            if(entr.getKey().equals(lastName)){
+                count++;
+            }
         }
-        return countSameLastName;
+        return count;
 
     }
 
     public static void main(String[] args) {
+
 
     }
 }

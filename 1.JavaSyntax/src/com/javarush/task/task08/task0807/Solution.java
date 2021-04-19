@@ -10,15 +10,13 @@ LinkedList и ArrayList
 public class Solution {
     public static Object createArrayList() {
         //напишите тут ваш код
-        ArrayList list = new ArrayList();
-        return list;
+        return new ArrayList<>();
 
     }
 
     public static Object createLinkedList() {
         //напишите тут ваш код
-        LinkedList list1 = new LinkedList();
-        return list1;
+        return new LinkedList<>();
 
     }
 

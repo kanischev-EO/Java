@@ -6,12 +6,13 @@ package com.javarush.task.task02.task0217;
 public class Solution {
     public static int min(int a, int b, int c, int d) {
         //напишите тут ваш код
-        int result;
-        int min1 = min(a, b);
-        int min2 = min(c, d);
-        if(min1 > min2) result = min2;
-        else result = min1;
-        return result;
+        int min1;
+        if(min(a, b)>min(c, d)){
+            min1 = min(c, d);
+        }else
+            min1 = min(a, b);
+        return min1;
+
 
     }
 
@@ -26,9 +27,9 @@ public class Solution {
 
     public static void main(String[] args) throws Exception {
         System.out.println(min(-20, -10));
-        System.out.println(min(-40, -10, -30, 40));
-        System.out.println(min(-20, -40, -30, 40));
-        System.out.println(min(-20, -10, -40, 40));
-        System.out.println(min(-20, -10, -30, -40));
+        System.out.println(min(0, 1, 2, 3));
+        System.out.println(min(-1, 2, 1, 2));
+        System.out.println(min(-1, -2, -3, -4));
+        System.out.println(min(1, 0, -1, -2));
     }
 }

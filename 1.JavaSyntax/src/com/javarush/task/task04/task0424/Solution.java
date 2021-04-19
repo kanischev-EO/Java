@@ -1,22 +1,22 @@
 package com.javarush.task.task04.task0424;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 /* 
 Три числа
 */
-
-import java.io.*;
-import java.util.*;
 
 public class Solution {
     public static void main(String[] args) throws Exception {
         //напишите тут ваш код
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        int a =Integer.parseInt(bufferedReader.readLine());
-        int b =Integer.parseInt(bufferedReader.readLine());
-        int c =Integer.parseInt(bufferedReader.readLine());
-        if (a == b ) System.out.println(3);
-        else if (b == c ) System.out.println(1);
-        else if (a == c ) System.out.println(2);
+        int one = Integer.parseInt(bufferedReader.readLine());
+        int two = Integer.parseInt(bufferedReader.readLine());
+        int three = Integer.parseInt(bufferedReader.readLine());
+        if(one != two && one != three ) System.out.print("1");
+        else if(two != one && two != three ) System.out.print("2");
+        else if(three != one && three != two ) System.out.print("3");
 
     }
 }

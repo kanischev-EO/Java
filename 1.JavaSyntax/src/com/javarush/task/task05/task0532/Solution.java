@@ -1,23 +1,26 @@
 package com.javarush.task.task05.task0532;
 
-import java.io.*;
 import java.io.BufferedReader;
+import java.io.InputStreamReader;
 
 /* 
-Задача по алгоритмам
+Задача по алгоритмам Ӏ Java Syntax: 5 уровень, 12 лекция
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception{
-    BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-    int currentValue = Integer.parseInt(reader.readLine());
-    int maxValue= 0;
-    if(currentValue> 0){
-        for (int i = 0; i < currentValue; i++) {
-            int enter = Integer.parseInt(reader.readLine());
-            if(enter>maxValue) maxValue = enter;
+public class Solution {
+    public static void main(String[] args) throws Exception {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        int oneN = Integer.parseInt(reader.readLine());
+        int maxCount = 0;
+        if(oneN> 0){
+            for (int i = 0; i < oneN; i++) {
+                int value = Integer.parseInt(reader.readLine());
+                if(value > maxCount) maxCount = value;
+            }
+            System.out.println(maxCount);
         }
-        System.out.println(maxValue);
 
-}}}
+        //напишите тут ваш код
+
+    }
+}

@@ -1,4 +1,4 @@
-taskKey="com.javarush.task.task09.task0907"\n\nИсключение при работе с числами
+taskKey="com.javarush.task.task09.task0907"\n\nИсключение при работе с числами Ӏ Java Syntax: 9 уровень, 6 лекция
 
 Перехватить исключение, возникающее при выполнении кода:
 int a = 42 / 0;

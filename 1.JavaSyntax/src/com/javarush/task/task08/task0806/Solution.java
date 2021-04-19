@@ -22,8 +22,8 @@ public class Solution {
         map.put("Comp", (double) 123);
 
         //напишите тут ваш код
-        for (Map.Entry<String, Object> value : map.entrySet()) {
-            System.out.println(value.getKey() + " - " + value.getValue());
+        for (Map.Entry<String, Object> one : map.entrySet()) {
+            System.out.println(one.getKey()+ " - " + one.getValue());
         }
 
     }

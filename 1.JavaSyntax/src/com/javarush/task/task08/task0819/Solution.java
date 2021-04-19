@@ -10,15 +10,7 @@ Set из котов
 public class Solution {
     public static void main(String[] args) {
         Set<Cat> cats = createCats();
-        Cat cat = null;
-        for (Cat pet: cats) {
-            cat = pet;
-        }
-        cats.remove(cat);
-
-
-        //напишите тут ваш код. step 3 - пункт 3
-
+        cats.remove(cats.iterator().next());
         printCats(cats);
     }
 
@@ -33,8 +25,8 @@ public class Solution {
 
     public static void printCats(Set<Cat> cats) {
         // step 4 - пункт 4
-        for (Cat cat : cats) {
-            System.out.println(cat);
+        for (Cat catiti : cats) {
+            System.out.println(catiti);
         }
     }
     public static class Cat{

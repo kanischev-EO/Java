@@ -18,19 +18,17 @@ public class Solution {
     public static void readData() {
         //напишите тут ваш код
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        Integer value;
         List<Integer> list = new ArrayList<>();
-        try {
-            while (true){
-                int value = Integer.parseInt(bufferedReader.readLine());
+        while(true){
+            try {
+                value = Integer.parseInt(bufferedReader.readLine());
                 list.add(value);
+            } catch (Exception e){
+                for (Integer integer : list) {
+                    System.out.println(integer);
+                }
             }
-        } catch (NumberFormatException e) {
-            for (Integer value : list) {
-                System.out.println(value);
-            }
-
-        } catch (IOException e) {
-            e.printStackTrace();
         }
     }
 }

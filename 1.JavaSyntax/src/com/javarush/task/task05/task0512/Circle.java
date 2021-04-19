@@ -6,20 +6,20 @@ package com.javarush.task.task05.task0512;
 
 public class Circle {
     //напишите тут ваш код
-    int centreX, centerY, radius, width, color;
-    public void initialize(int centreX, int centerY, int radius){
-        this.centreX = centreX;
+    int centerX, centerY, radius, width , color;
+    public void initialize(int centerX, int centerY, int radius){
+        this.centerX = centerX;
         this.centerY = centerY;
         this.radius = radius;
     }
-    public void initialize(int centreX, int centerY, int radius, int width){
-        this.centreX = centreX;
+    public void initialize(int centerX, int centerY, int radius, int width){
+        this.centerX = centerX;
         this.centerY = centerY;
         this.radius = radius;
         this.width = width;
     }
-    public void initialize(int centreX, int centerY, int radius, int width, int color){
-        this.centreX = centreX;
+    public void initialize(int centerX, int centerY, int radius, int width, int color){
+        this.centerX = centerX;
         this.centerY = centerY;
         this.radius = radius;
         this.width = width;

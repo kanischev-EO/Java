@@ -8,7 +8,9 @@ public class Cat {
     public static void main(String[] args) {
 
     }
-    public void finalize(){
+    @Override
+    protected void finalize() throws Throwable{
+        super.finalize();
         System.out.println("A Cat was destroyed");
     }
 
@@ -18,7 +20,9 @@ public class Cat {
 
 class Dog {
     //напишите тут ваш код
-    public void finalize(){
+    @Override
+    protected void finalize() throws Throwable{
+        super.finalize();
         System.out.println("A Dog was destroyed");
     }
 }

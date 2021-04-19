@@ -1,36 +1,27 @@
 package com.javarush.task.task04.task0427;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 /* 
 Описываем числа
 */
-
-import java.io.*;
-import java.util.*;
 
 public class Solution {
     public static void main(String[] args) throws Exception {
         //напишите тут ваш код
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        int value = Integer.parseInt(bufferedReader.readLine());
-        if (value > 0 && value < 10) {
-            if (value % 2 == 0) {
-                System.out.println("четное однозначное число");
-            } else {
-                System.out.println("нечетное однозначное число");
-            }
-        } else if (value >= 10 && value < 100) {
-            if (value % 2 == 0) {
-                System.out.println("четное двузначное число");
-            } else {
-                System.out.println("нечетное двузначное число");
-            }
-        } else if (value >= 100 && value < 1000) {
-            if (value % 2 == 0) {
-                System.out.println("четное трехзначное число");
-            } else {
-                System.out.println("нечетное трехзначное число");
-            }
-
+        int number = Integer.parseInt(bufferedReader.readLine());
+        if(number>0 && number<=9){
+            if(number % 2 ==0) System.out.print("четное однозначное число");
+            else System.out.print("нечетное однозначное число");
+        } else if (number>=10 && number<=99){
+            if(number % 2 ==0) System.out.print("четное двузначное число");
+            else System.out.print("нечетное двузначное число");
+        } else if(number>=100 && number<= 999){
+            if(number % 2 ==0) System.out.print("четное трехзначное число");
+            else System.out.print("нечетное трехзначное число");
         }
+
     }
 }

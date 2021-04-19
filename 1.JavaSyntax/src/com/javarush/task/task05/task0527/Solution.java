@@ -7,8 +7,8 @@ package com.javarush.task.task05.task0527;
 public class Solution {
     public static void main(String[] args) {
         Mouse jerryMouse = new Mouse("Jerry", 12, 5);
-        Cat catTom = new Cat("Tom", 7, "дворовый кот");
-        Dog dogMax = new Dog("Max", 3,"королевский корги");
+        Cat cat = new Cat("Tom", 4, "Мейкун");
+        Dog dog = new Dog("Гвидон", 13, "Пудель");
 
         //напишите тут ваш код
     }
@@ -45,5 +45,7 @@ public class Solution {
             this.age = age;
             this.breed = breed;
         }
-        //напишите тут ваш код
-}}
+    }
+
+    //напишите тут ваш код
+}

@@ -1,7 +1,7 @@
 package com.javarush.task.task07.task0723;
 
 /* 
-Обратный отсчёт
+Обратный отсчёт Ӏ Java Syntax: 7 уровень, 12 лекция
 */
 
 public class Solution {

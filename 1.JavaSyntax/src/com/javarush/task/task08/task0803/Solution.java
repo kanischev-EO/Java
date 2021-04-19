@@ -21,22 +21,17 @@ public class Solution {
 
     public static Map<String, Cat> addCatsToMap(String[] cats) {
         //напишите тут ваш код
-        Map<String, Cat> myMap = new HashMap<>();
-
-        for (int i = 0; i <cats.length ; i++) {
-            myMap.put(cats[i], new Cat(cats[i]));
+        Map<String, Cat > map = new HashMap<>();
+        for (String catiti: cats) {
+            map.put(catiti, new Cat(catiti));
         }
-        return myMap;
+        return map;
 
     }
 
 
     public static class Cat {
         String name;
-
-        public String getName() {
-            return name;
-        }
 
         public Cat(String name) {
             this.name = name;

@@ -11,15 +11,16 @@ import java.util.ArrayList;
 public class Solution {
     public static void main(String[] args) throws IOException {
         //напишите тут ваш код
-        BufferedReader bufferedReader = new BufferedReader( new InputStreamReader(System.in));
-        ArrayList<String> list = new ArrayList<>();
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        ArrayList<String> strings = new ArrayList<>();
         for (int i = 0; i < 10 ; i++) {
-            list.add(bufferedReader.readLine());
+            strings.add(bufferedReader.readLine());
         }
-        for (int i = 0; i < list.size() - 1; i++) {
-            if(list.get(i).length() > list.get(i+1).length()){
-                System.out.println(i+1);
-                break;
+        for (int i = 0; i < strings.size()-1 ; i++) {
+            String value1 = strings.get(i);
+            String value2 = strings.get(i + 1);
+            if(value2.length()> value1.length()){
+                System.out.println(strings.indexOf(value2));
             }
         }
     }

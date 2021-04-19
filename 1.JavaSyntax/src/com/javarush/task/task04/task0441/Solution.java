@@ -1,22 +1,21 @@
 package com.javarush.task.task04.task0441;
 
-/* 
-Как-то средненько
-*/
-
-import java.io.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 
 public class Solution {
     public static void main(String[] args) throws Exception {
-        //напишите тут ваш код
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        int[] nums = new int[3];
-        for (int i = 0; i < nums.length ; i++) {
-            nums[i] = Integer.parseInt(bufferedReader.readLine());
-        }
-        Arrays.sort(nums);
-        System.out.print(nums[1]);
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        int number1 = Integer.parseInt(reader.readLine());
+        int number2 = Integer.parseInt(reader.readLine());
+        int number3 = Integer.parseInt(reader.readLine());
 
+        if ((number1 >= number2 && number1 <= number3) || (number1 <= number2 && number1 >= number3)) {
+            System.out.println(number1);
+        } else if ((number2 >= number1 && number2 <= number3) || (number2 <= number1 && number2 >= number3)) {
+            System.out.println(number2);
+        } else {
+            System.out.println(number3);
+        }
     }
 }

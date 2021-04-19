@@ -2,6 +2,8 @@ package com.javarush.task.task08.task0824;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 /* 
 Собираем семейство
@@ -10,54 +12,45 @@ import java.util.Arrays;
 public class Solution {
     public static void main(String[] args) {
         //напишите тут ваш код
-        Human child1 = new Human("Антошка", true, 12);
-        Human child2 = new Human("Cашенька", false, 13);
-        Human child3 = new Human("Cережа", true, 12);
-        Human mother = new Human("Светлана", false, 29, new Human[]{child1, child2, child3});
-        Human father = new Human("Анатолий", true, 30, new Human[]{child1, child2, child3});
-        Human grandfather1 = new Human("Василий", true, 64, new Human[]{father});
-        Human grandfather2 = new Human("Генадий", true, 70, new Human[]{mother});
-        Human grandmother = new Human("Людмила", false, 70, new Human[]{father});
-        Human grandmother2 = new Human("Татьяна", false, 70, new Human[]{mother});
-
-        ArrayList<Human> people = new ArrayList<Human>(Arrays.asList(grandfather1, grandfather2, grandmother, grandmother2,
-                 father, mother, child1, child2, child3));
-        for (Human man : people) {
-            System.out.println(man);
-        }
-
+        Human oneChildren = new Human("Женя", true, 25);
+        Human twoChildren = new Human("Николай", true, 32);
+        Human threeChildren = new Human("Жанна", false, 17);
+        Human father = new Human("Олег", true, 52, oneChildren, twoChildren);
+        Human mother = new Human("Cветлана", false, 52, threeChildren);
+        Human grandFather1 = new Human("Иван", true, 81, father);
+        Human grandFather2 = new Human("Петя", true, 80, mother);
+        Human grandMother1 = new Human("Олеся", false, 76, father);
+        Human grandMother2 = new Human("Татьяна", false, 75, mother);
+        System.out.println(oneChildren);
+        System.out.println(twoChildren);
+        System.out.println(threeChildren);
+        System.out.println(father);
+        System.out.println(mother);
+        System.out.println(grandFather1);
+        System.out.println(grandFather2);
+        System.out.println(grandMother1);
+        System.out.println(grandMother2);
     }
 
     public static class Human {
-        //напишите тут ваш код
-        String name;
-        boolean sex;
-        int age;
-        ArrayList<Human> children;
-
-        public Human(String name) {
-            this.name = name;
-        }
-
         public Human(String name, boolean sex, int age) {
             this.name = name;
             this.sex = sex;
             this.age = age;
-            this.children = new ArrayList<>(0);
         }
 
-        public Human(String name, boolean sex, int age, Human[] human) {
+        public Human(String name, boolean sex, int age, Human... children) {
             this.name = name;
             this.sex = sex;
             this.age = age;
-            this.children = new ArrayList<Human>();
-            for (Human childPeople : human) {
-                children.add(childPeople);
-
-            }
-
-
+            Collections.addAll(this.children, children);
         }
+
+        //напишите тут ваш код
+        String name;
+        boolean sex;
+        int age;
+       List<Human> children = new ArrayList<>();
 
         public String toString() {
             String text = "";

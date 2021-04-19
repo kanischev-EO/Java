@@ -1,40 +1,36 @@
 package com.javarush.task.task08.task0812;
 
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-/*
+/* 
 Cамая длинная последовательность
 */
+
 public class Solution {
     public static void main(String[] args) throws IOException {
         //напишите тут ваш код
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        ArrayList<Integer> list = new ArrayList<>();
-        ArrayList<Integer> valueForArrays = new ArrayList<>();
-        int count = 1 ;
-        for (int i = 0; i < 10; i++) {
-            list.add(Integer.parseInt(bufferedReader.readLine()));
-        }
-        for (int i = 0; i < list.size() ; i++) {
-            valueForArrays.add(i, 1);
+        ArrayList<Integer> integers = new ArrayList<>();
+        ArrayList<Integer> countReplay = new ArrayList<>();
 
+        int count = 1;
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        for (int i = 0; i < 10 ; i++) {
+            integers.add(Integer.parseInt(bufferedReader.readLine()));
         }
-        for (int i = 0; i < list.size() - 1; i++) {
-            if (i == list.size() - 1 ) break;
-            if (list.get(i) == list.get(i + 1)) {
-                int value = valueForArrays.get(count) + 1;
-                valueForArrays.set(count,value);
-            }else ++count;
+        for (int i = 0; i < integers.size()-1; i++) {
+            if(integers.get(i)== integers.get(i+1)){
+                count++;
+            }else { countReplay.add(count);
+            count=1;
+            }
         }
-        Collections.sort(valueForArrays);
-        int max = Collections.max(valueForArrays) > 1 ? Collections.max(valueForArrays) : 0;
-        System.out.println(max);
+        System.out.println(Collections.max(countReplay));
+
+
     }
 }

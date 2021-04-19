@@ -1,19 +1,19 @@
 package com.javarush.task.task04.task0422;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 /* 
 18+
 */
 
-import java.io.*;
-import java.util.*;
-
 public class Solution {
     public static void main(String[] args) throws Exception {
-        //напишите тут ваш код
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         String name = bufferedReader.readLine();
         int age = Integer.parseInt(bufferedReader.readLine());
-        if(age < 18) System.out.println("Подрасти еще");
+        if(age < 18) System.out.print("Подрасти еще");
+        //напишите тут ваш код
 
     }
 }

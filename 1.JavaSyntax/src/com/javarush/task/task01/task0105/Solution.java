@@ -6,11 +6,7 @@ package com.javarush.task.task01.task0105;
 
 public class Solution {
     public static void main(String[] args) {
-        //напишите тут ваш код
-        String  name, city;
+        String name, city;
         int age;
-        /*
-        You in my house, beach!
-        */
     }
 }
